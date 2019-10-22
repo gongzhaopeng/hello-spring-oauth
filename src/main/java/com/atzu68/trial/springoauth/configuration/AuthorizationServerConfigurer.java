@@ -64,6 +64,9 @@ public class AuthorizationServerConfigurer
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
 
         security.passwordEncoder(NoOpPasswordEncoder.getInstance());
+
+        security.allowFormAuthenticationForClients();
+        security.checkTokenAccess("permitAll()");
     }
 
     @Bean
