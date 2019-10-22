@@ -1,1 +1,5 @@
-
+spring:
+  thymeleaf:
+    prefix: classpath:/views/
+    suffix: .html
+    cache: false
